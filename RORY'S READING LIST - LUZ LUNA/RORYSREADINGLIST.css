@@ -36,7 +36,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-h1.main-title {
+.main-title {
     text-align: center;
     font-size: 60px;
     color: #51180D;
@@ -49,12 +49,11 @@ h1.main-title {
 }
 
 
-div.flex-container {
+.flex-container {
     display: flex; 
     justify-content: space-around;
     margin: 40px;
 }
-
 
 section {
     background-color: #F4782B;
@@ -79,4 +78,5 @@ footer {
     padding: 15px;
     margin-top: 450px;
 }
+
 }
