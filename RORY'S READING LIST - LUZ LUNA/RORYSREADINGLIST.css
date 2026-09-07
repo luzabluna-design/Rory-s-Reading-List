@@ -1,13 +1,82 @@
+
 @import url("https://fonts.google.com/share?selection.family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700|Noto+Serif:ital,wght@0,100..900;1,100..900");
 *{
-    background-color: #f8f4ee; 
-   box-sizing: border-box;
-   font-size: 22px;
-   font-family: 'Courier New', Courier, monospace;
+
+body {
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+    background-image: url('fondo-libros.jpg'); 
 }
-.secciones{
+
+header {
+    background-color: #51180D;
+    color: #f8f4ee;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none; 
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: #f8f4ee;
+    font-weight: bold;
+}
+
+h1.main-title {
+    text-align: center;
+    font-size: 60px;
+    color: #51180D;
+    background-color: #f8f4ee;
     padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+div.flex-container {
+    display: flex; 
+    justify-content: space-around;
+    margin: 40px;
+}
+
+
+section {
+    background-color: #F4782B;
+    border: 2px solid #F4782B; 
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section img{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: block;
+}
+
+footer {
+    background-color: #51180D;
+    color: #f8f4ee;
+    text-align: center;
+    padding: 15px;
+    margin-top: 450px;
+}
 }
