@@ -1,74 +1,306 @@
+html {
+    height: 100%;
+}
 
-@import url("https://fonts.google.com/share?selection.family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700|Noto+Serif:ital,wght@0,100..900;1,100..900");
-*{
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family:'Courier New', Courier, monospace;
-    background-image: url('fondo-libros.jpg'); 
+    font-family: "Courier Prime", Courier, monospace;
+    background-color: #f8f4ee;
+    background-image: url("fondo-libros.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #51180D;
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
 }
 
 header {
     background-color: #51180D;
     color: #f8f4ee;
-    text-align: center;
-    padding: 20px;
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #f8f4ee;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #F4782B;
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+/* Estilo para controlar el tamaño de la imagen del logo en el header */
+.logo-imagen img {
+    height: 40px; /* Altura controlada para que quede bien en la barra */
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 nav ul {
-    list-style-type: none; 
+    list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 nav ul li {
-    margin-top: 0;
-    margin-right: 15px;
-    margin-bottom: 0;
-    margin-left: 15px;
+    margin: 4px 6px;
 }
 
 nav ul li a {
-    text-decoration: none; 
+    text-decoration: none;
     color: #f8f4ee;
     font-weight: bold;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.activo {
+    color: #51180D;
+    background-color: #F4782B;
+    border-color: #f8f4ee;
+}
+
+.caja {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    border-radius: 20px;
+    padding: 16px 22px;
 }
 
 .main-title {
     text-align: center;
-    font-size: 60px;
+    font-size: 48px;
     color: #51180D;
     background-color: #f8f4ee;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 14px 24px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    border: 2px solid #51180D;
 }
 
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 22px;
+    background-color: #f8f4ee;
+    border-radius: 20px;
+    border: 2px solid #51180D;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #51180D;
+    background-color: #f8f4ee;
+    border: 2px solid #F4782B;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 90%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 20px;
+}
 
 .flex-container {
-    display: flex; 
+    display: flex;
     justify-content: space-around;
-    margin: 40px;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 section {
     background-color: #F4782B;
-    border: 2px solid #F4782B; 
-    padding: 20px;
-    width: 25%;
+    border: 2px solid #51180D;
+    padding: 8px;
+    width: 300px;
     text-align: center;
     margin-top: 20px;
+    color: #51180D;
+    border-radius: 20px;
 }
 
-section img{
+section a {
+    text-decoration: none;
+    color: #51180D;
+}
+
+.tarjeta-texto {
+    background-color: #f8f4ee;
+    border-radius: 16px;
+    padding: 10px 12px;
+    margin: 8px 4px 4px 4px;
+}
+
+section p {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.texto-chico {
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Las fotos de todo el sitio (Catálogo) quedan grandes como antes (400px) */
+.foto {
     width: 100%;
-    height: auto;
-    margin-top: 10px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 0;
+    border: 2px solid #51180D;
     display: block;
+    border-radius: 16px;
+}
+
+/* Pero las fotos que estén dentro del flex-container (el Inicio) miden 260px */
+.flex-container .foto {
+    height: 260px;
+}
+
+.tapa {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 0;
+    border: 2px solid #51180D;
+    display: block;
+    border-radius: 16px;
+    background-color: #f8f4ee;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #51180D;
+    color: #f8f4ee;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #51180D;
+}
+
+.boton:hover {
+    background-color: #f8f4ee;
+    color: #51180D;
+}
+
+button.boton {
+    font-family: "Courier Prime", Courier, monospace;
+    cursor: pointer;
+}
+
+.lista-usuario {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.lista-usuario ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-usuario li {
+    margin-bottom: 10px;
+    background-color: #F4782B;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    padding: 10px 12px;
+}
+
+.form-libro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-libro input,
+.form-libro select {
+    font-family: "Courier Prime", Courier, monospace;
+    padding: 8px 12px;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    background-color: #f8f4ee;
+    color: #51180D;
+}
+
+.resena {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+}
+
+.resena img {
+    width: 220px;
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    background-color: #F4782B;
+}
+
+.dato {
+    margin-bottom: 6px;
+}
+
+.dato span {
+    font-weight: bold;
 }
 
 footer {
@@ -76,7 +308,66 @@ footer {
     color: #f8f4ee;
     text-align: center;
     padding: 15px;
-    margin-top: 450px;
+    margin-top: auto;
+    clear: both;
 }
 
+footer p {
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        justify-content: center;
+    }
+
+    section {
+        width: 45%;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .lista-usuario,
+    .resena {
+        width: 90%;
+    }
+
+    .foto,
+    .tapa {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .resena img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
