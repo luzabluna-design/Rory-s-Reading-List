@@ -1,0 +1,414 @@
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Courier Prime", Courier, monospace;
+    background-color: #f8f4ee;
+    background-image: url("fondo-libros.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #51180D;
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header superior en cremita con texto marrón */
+header {
+    background-color: #f8f4ee;
+    color: #51180D;
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #51180D;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Logo con su borde naranja característico */
+.logo {
+    text-decoration: none;
+    color: #51180D;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #F4782B;
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+/* Estilo para controlar el tamaño de la imagen del logo en el header */
+.logo-imagen img {
+    height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 4px 6px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #51180D;
+    font-weight: bold;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+}
+
+/* Hover y activo con el borde y fondo naranja que tenías */
+nav ul li a:hover,
+nav ul li a.activo {
+    color: #51180D;
+    background-color: #F4782B;
+    border-color: #51180D;
+}
+
+.caja {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    border-radius: 20px;
+    padding: 16px 22px;
+}
+
+/* Título principal con fondo marrón, letras cremita y borde fino naranja */
+.main-title {
+    text-align: center;
+    font-size: 48px;
+    color: #f8f4ee;
+    background-color: #51180D;
+    padding: 14px 24px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    border: 2px solid #51180D;
+}
+
+/* Introducción con fondo marrón, letras cremita y borde fino naranja */
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 22px;
+    background-color: #51180D;
+    color: #f8f4ee;
+    border-radius: 20px;
+    border: 2px solid #51180D;
+}
+
+/* Subtítulos con su detalle naranja */
+.subtitulo {
+    text-align: center;
+    color: #51180D;
+    background-color: #f8f4ee;
+    border: 2px solid #F4782B;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 90%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Cajitas de las secciones en marrón oscuro */
+section {
+    background-color: #51180D;
+    border: 2px solid #51180D;
+    padding: 8px;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    color: #f8f4ee;
+    border-radius: 20px;
+    border: 2px solid #f8f4ee;
+}
+
+section a {
+    text-decoration: none;
+    color: #51180D;
+}
+
+/* Forzamos que el texto dentro de las tarjetas tenga fondo cremita y letras marrones bien legibles */
+.tarjeta-texto {
+    background-color: #f8f4ee !important;
+    color: #51180D !important;
+    border-radius: 16px;
+    padding: 10px 12px;
+    margin: 8px 4px 4px 4px;
+}
+
+.tarjeta-texto p,
+.tarjeta-texto span {
+    color: #51180D !important;
+}
+
+/* Excluimos los enlaces que sean botones para que no hereden el color marrón del texto general */
+.tarjeta-texto a:not(.boton) {
+    color: #51180D !important;
+}
+
+.tarjeta-texto > p:first-child {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.texto-chico {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #51180D !important;
+}
+
+/* Las fotos de todo el sitio (Catálogo) quedan grandes como antes (400px) */
+.foto {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 0;
+    border: 2px solid #51180D;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Pero las fotos que estén dentro del flex-container (el Inicio) miden 260px */
+.flex-container .foto {
+    height: 260px;
+}
+
+.tapa {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 0;
+    border: 2px solid #51180D;
+    display: block;
+    border-radius: 16px;
+    background-color: #f8f4ee;
+}
+
+/* Botones con fondo marrón y letras CLARAS/CREMITA forzadas para que se lean siempre */
+.boton,
+.tarjeta-texto .boton {
+    display: inline-block !important;
+    background-color: #51180D !important;
+    color: #f8f4ee !important;
+    text-decoration: none !important;
+    padding: 10px 18px !important;
+    font-weight: bold !important;
+    border-radius: 20px !important;
+    border: 2px solid #f8f4ee !important;
+    text-align: center !important;
+}
+
+.boton *,
+.tarjeta-texto .boton * {
+    color: #f8f4ee !important;
+}
+
+.boton:hover,
+.tarjeta-texto .boton:hover {
+    background-color: #F4782B !important;
+    color: #51180D !important;
+    border: 2px solid #51180D !important;
+}
+
+.boton:hover *,
+.tarjeta-texto .boton:hover * {
+    color: #51180D !important;
+}
+
+button.boton {
+    font-family: "Courier Prime", Courier, monospace;
+    cursor: pointer;
+}
+
+.lista-usuario {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.lista-usuario ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-usuario li {
+    margin-bottom: 10px;
+    background-color: #51180D;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    padding: 10px 12px;
+    color: #f8f4ee;
+}
+
+.form-libro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-libro input,
+.form-libro select {
+    font-family: "Courier Prime", Courier, monospace;
+    padding: 8px 12px;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    background-color: #f8f4ee;
+    color: #51180D;
+}
+
+.resena {
+    background-color: #f8f4ee;
+    border: 2px solid #51180D;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+}
+
+.resena img {
+    width: 220px;
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border: 2px solid #51180D;
+    border-radius: 16px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    background-color: #51180D;
+}
+
+.dato {
+    margin-bottom: 6px;
+}
+
+.dato span {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #51180D;
+    color: #f8f4ee;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    clear: both;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        justify-content: center;
+    }
+
+    section {
+        width: 45%;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .lista-usuario,
+    .resena {
+        width: 90%;
+    }
+
+    .foto,
+    .tapa {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .resena img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
